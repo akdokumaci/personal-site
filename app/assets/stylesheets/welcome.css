@@ -54,6 +54,13 @@ body::before {
     transition: all 0.5s ease;
 }
 
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 .section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -128,3 +135,10 @@ body::before {
     from { width: 0; }
     to { width: 100%; }
 }
+
+@media (max-width: 600px) {
+    section {
+      width: 100%;
+      height: auto;
+    }
+  }
